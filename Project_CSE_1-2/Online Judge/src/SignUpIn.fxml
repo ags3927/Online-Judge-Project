@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpIn">
+   <children>
+      <Label layoutY="31.0" prefHeight="40.0" prefWidth="600.0" text="                         Welcome To Our Online Judge" textFill="#4651a4" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginName" layoutX="315.0" layoutY="104.0" prefHeight="29.0" prefWidth="279.0" promptText="Email/Handle" AnchorPane.topAnchor="154.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="315.0" layoutY="171.0" prefHeight="29.0" prefWidth="279.0" promptText="Password" AnchorPane.topAnchor="210.0" />
+      <Button fx:id="signIn" layoutX="394.0" layoutY="284.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="29.0" prefWidth="108.0" text="Sign In" textFill="#4f6fe4" AnchorPane.topAnchor="284.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="77.0" layoutY="112.0" prefHeight="50.0" prefWidth="108.0" text=" Join US!" textFill="#8091fc" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inName" layoutX="24.0" layoutY="171.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="154.0" />
+      <TextField fx:id="inHandle" layoutX="24.0" layoutY="227.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="210.0" />
+      <TextField fx:id="inEmail" layoutX="25.0" layoutY="272.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="265.0" />
+      <PasswordField fx:id="inPassword" layoutX="24.0" layoutY="344.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="324.0" />
+      <Label layoutX="24.0" layoutY="146.0" prefHeight="17.0" prefWidth="61.0" text="Full Name" AnchorPane.topAnchor="129.0" />
+      <Label layoutX="24.0" layoutY="202.0" prefHeight="17.0" prefWidth="84.0" text="User Handle" AnchorPane.topAnchor="185.0" />
+      <Label layoutX="24.0" layoutY="255.0" prefHeight="25.0" prefWidth="84.0" text="Email Address" AnchorPane.topAnchor="238.0" />
+      <Label layoutX="24.0" layoutY="314.0" prefHeight="25.0" prefWidth="84.0" text="Password" AnchorPane.topAnchor="294.0" />
+      <Button fx:id="signUp" layoutX="70.0" layoutY="357.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="38.0" prefWidth="99.0" text="Sign Up" textFill="#515597">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="383.0" layoutY="102.0" prefHeight="21.0" prefWidth="140.0" text="Have An Account??" textFill="#404da3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow spread="0.14" />
+   </effect>
+</AnchorPane>
