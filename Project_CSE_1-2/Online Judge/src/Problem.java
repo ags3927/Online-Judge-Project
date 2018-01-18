@@ -4,6 +4,9 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.InputMismatchException;
 import java.util.ResourceBundle;
 
@@ -138,13 +141,9 @@ public class Problem {
     void Submit(ActionEvent event) throws IOException {
         lang = chooseLang.getValue();
         if(file != null && lang != null) {
-            Socket socket = new Socket("127.0.0.1", 53333);
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
-            oos.writeObject("Submit");
-            oos.writeObject(lang);
-            oos.writeObject(file);
-            socket.close();
+            NetworkUtil temp = Communication.get();
+            String submission = readFile(file);
+            temp.write(new SubmitData(submission, lang, counter));
         }
     }
 
@@ -187,6 +186,12 @@ public class Problem {
 
 
         problemDetails.setText(statement);
+    }
+
+    static String readFile(File file) throws IOException
+    {
+        byte[] encoded = Files.readAllBytes(Paths.get(file.getPath()));
+        return new String(encoded, Charset.defaultCharset());
     }
 }
 

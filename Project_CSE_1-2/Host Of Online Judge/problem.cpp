@@ -49,36 +49,36 @@ int betweenBelow(int i, int j, int x) {
 }
 
 int main() {
-  scanf("%d", &n);
-  FOR(i, n) {
-    lis[i] = getPoint();
-  }
+    scanf("%d", &n);
+    FOR(i, n) {
+        lis[i] = getPoint();
+    }
 
-  memset(num, 0, sizeof(num));
-  FOR(i, n) {
-    FOR(j, n) if(X(lis[i]) < X(lis[j])){
-      FOR(k, n) if(k != i && k != j) {
-        if(below(k, i)) num[i][j]++;
-        if(below(k, j)) num[i][j]++;
-        if(betweenBelow(i, j, k)) {
-          num[i][j] += 2;
+      memset(num, 0, sizeof(num));
+      FOR(i, n) {
+        FOR(j, n) if(X(lis[i]) < X(lis[j])){
+          FOR(k, n) if(k != i && k != j) {
+            if(below(k, i)) num[i][j]++;
+            if(below(k, j)) num[i][j]++;
+            if(betweenBelow(i, j, k)) {
+              num[i][j] += 2;
+            }
+          }
+          num[j][i] = -num[i][j];
         }
       }
-      num[j][i] = -num[i][j];
-    }
-  }
 
-  memset(ans, 0, sizeof(ans));
-  FOR(i, n) FOR(j, i) FOR(k, j) {
-    int temp = abs(num[i][j] + num[j][k] + num[k][i]) / 2;
-    temp -= betweenBelow(i, j, k);
-    temp -= betweenBelow(j, k, i);
-    temp -= betweenBelow(k, i, j);
-    ans[temp]++;
-  }
-
-  FOR(i, n - 2) {
-    printf("%d\n", ans[i]);
-  }
-  return 0;
+      memset(ans, 0, sizeof(ans));
+      FOR(i, n) FOR(j, i) FOR(k, j) {
+        int temp = abs(num[i][j] + num[j][k] + num[k][i]) / 2;
+        temp -= betweenBelow(i, j, k);
+        temp -= betweenBelow(j, k, i);
+        temp -= betweenBelow(k, i, j);
+        ans[temp]++;
+      }
+      FOR(i, n - 2) {
+        printf("%d\n", ans[i]);
+      }
+      return 0;
 }
+

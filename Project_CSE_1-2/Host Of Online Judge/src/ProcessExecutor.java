@@ -98,18 +98,14 @@ public class ProcessExecutor {
         return new String(encoded, Charset.defaultCharset());
     }
 
-    void Compilation(File code) throws Exception {
-        BufferedReader br = new BufferedReader(new FileReader(code));
-        BufferedWriter bw = new BufferedWriter(new FileWriter("problem.cpp"));
-        while (true){
-            String data = br.readLine();
-            if (data == null)
-                break;
-            bw.write(data+"\n");
-        }
-        br.close();
-        bw.close();
+    void Compilation(SubmitData sub) throws Exception {
 
+        BufferedWriter bw = new BufferedWriter(new FileWriter("problem.cpp"));
+        String data = sub.getSubmission();
+        bw.write(data+"\n");
+        bw.close();
+        File file1  = new File("b.exe");
+        if(file1.exists()){ file1.delete();}
         ProcessExecutor p1 = new ProcessExecutor("g++ -o b problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
         ProcessExecutor p2 = null;
         File file = new File("b.exe");
