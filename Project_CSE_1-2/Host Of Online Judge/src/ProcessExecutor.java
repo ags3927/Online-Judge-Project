@@ -106,7 +106,9 @@ public class ProcessExecutor {
         bw.close();
         File file1  = new File("b.exe");
         if(file1.exists()){ file1.delete();}
-        ProcessExecutor p1 = new ProcessExecutor("g++ -o b problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+        //ProcessExecutor p1 = new ProcessExecutor("g++ -o b problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+        Runtime rt = Runtime.getRuntime();
+        rt.exec("g++ -o b problem.cpp");
         ProcessExecutor p2 = null;
         File file = new File("b.exe");
         boolean exists = file.exists();
