@@ -8,31 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
     <children>
-        <Label layoutX="149.0" layoutY="11.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="344.0">
+        <Label layoutX="256.0" layoutY="21.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="384.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutX="21.0" layoutY="56.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <ButtonBar layoutY="64.0" prefHeight="70.0" prefWidth="780.0" AnchorPane.bottomAnchor="316.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0">
             <buttons>
-                <Button fx:id="home" mnemonicParsing="false" onAction="#HomeItself" prefHeight="40.0" text="Home" textFill="#273284">
+                <Button fx:id="home" mnemonicParsing="false" onAction="#HomeItself" prefHeight="41.0" text="Home" textFill="#273284">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="50.0" prefWidth="170.0" text="Contest" textFill="#273284">
+                <Button fx:id="problemset" mnemonicParsing="false" onAction="#Problemset" prefHeight="41.0" text="Problemset" textFill="#273284">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="problemset" mnemonicParsing="false" onAction="#Problemset" prefHeight="48.0" text="Problemset" textFill="#273284">
-                    <font>
-                        <Font name="System Bold" size="15.0" />
-                    </font>
-                </Button>
-                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="46.0" text="Discussion" textFill="#273382">
+                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="41.0" text="Discussion" textFill="#273382">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -42,14 +37,19 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
+                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="41.0" prefWidth="170.0" text="Contest" textFill="#273284">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
+        <Button fx:id="signOut" layoutX="688.0" layoutY="402.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-        <TableView layoutX="391.0" layoutY="120.0" prefHeight="235.0" prefWidth="200.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="0.0">
+        <TableView layoutX="504.0" layoutY="142.0" prefHeight="235.0" prefWidth="282.0" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="14.0">
             <columns>
                 <TableColumn prefWidth="199.0" text="                      Recent" />
             </columns>

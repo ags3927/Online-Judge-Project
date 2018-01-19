@@ -7,31 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problemset">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problemset">
     <children>
-        <Label layoutX="149.0" layoutY="11.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="344.0">
+        <Label layoutX="238.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="-50.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutX="21.0" layoutY="56.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <ButtonBar layoutY="36.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="36.0">
             <buttons>
-                <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="40.0" text="Home" textFill="#273286">
+                <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="41.0" text="Home" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="50.0" prefWidth="170.0" text="Contest" textFill="#273286">
+                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="41.0" prefWidth="170.0" text="Contest" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="problemset" mnemonicParsing="false" onAction="#ProblemsetItself" prefHeight="48.0" text="Problemset" textFill="#273286">
+                <Button fx:id="problemset" mnemonicParsing="false" onAction="#ProblemsetItself" prefHeight="41.0" text="Problemset" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="46.0" text="Discussion" textFill="#273286">
+                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="41.0" text="Discussion" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -43,11 +43,11 @@
                 </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
+        <Button fx:id="signOut" layoutX="714.0" layoutY="400.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284" AnchorPane.leftAnchor="714.0">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-      <ListView fx:id="listView" layoutX="72.0" layoutY="170.0" onMouseClicked="#handleMouseClick" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="120.0" />
+      <ListView fx:id="listView" layoutX="72.0" layoutY="132.0" onMouseClicked="#handleMouseClick" prefHeight="318.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="132.0" />
     </children>
 </AnchorPane>

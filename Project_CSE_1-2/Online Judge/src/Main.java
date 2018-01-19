@@ -15,7 +15,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("SignUpIn.fxml"));
         primaryStage.setTitle("Online Judge");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 800, 450));
         primaryStage.show();
     }
 

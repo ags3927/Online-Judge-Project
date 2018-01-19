@@ -5,46 +5,53 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpIn">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpIn">
    <children>
-      <Label layoutY="31.0" prefHeight="40.0" prefWidth="600.0" text="                         Welcome To Our Online Judge" textFill="#4651a4" AnchorPane.topAnchor="14.0">
+      <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutY="31.0" prefHeight="40.0" prefWidth="600.0" text="                         Welcome To Our Online Judge" textFill="#101e07" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="loginName" layoutX="315.0" layoutY="104.0" prefHeight="29.0" prefWidth="279.0" promptText="Email/Handle" AnchorPane.topAnchor="154.0">
+      <TextField fx:id="loginName" layoutX="480.0" layoutY="154.0" prefHeight="29.0" prefWidth="279.0" promptText="Email/Handle" AnchorPane.topAnchor="154.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="password" layoutX="315.0" layoutY="171.0" prefHeight="29.0" prefWidth="279.0" promptText="Password" AnchorPane.topAnchor="210.0" />
-      <Button fx:id="signIn" layoutX="394.0" layoutY="284.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="29.0" prefWidth="108.0" text="Sign In" textFill="#4f6fe4" AnchorPane.topAnchor="284.0">
+      <PasswordField fx:id="password" layoutX="479.0" layoutY="210.0" prefHeight="29.0" prefWidth="279.0" promptText="Password" AnchorPane.topAnchor="210.0" />
+      <Button fx:id="signIn" layoutX="555.0" layoutY="275.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="29.0" prefWidth="108.0" text="Sign In" textFill="#4f6fe4" AnchorPane.topAnchor="275.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Label layoutX="77.0" layoutY="112.0" prefHeight="50.0" prefWidth="108.0" text=" Join US!" textFill="#8091fc" AnchorPane.topAnchor="85.0">
+      <Label layoutX="98.0" layoutY="85.0" prefHeight="50.0" prefWidth="108.0" text=" Join US!" textFill="#030a32" AnchorPane.topAnchor="85.0">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="inName" layoutX="24.0" layoutY="171.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="154.0" />
-      <TextField fx:id="inHandle" layoutX="24.0" layoutY="227.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="210.0" />
-      <TextField fx:id="inEmail" layoutX="25.0" layoutY="272.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="265.0" />
-      <PasswordField fx:id="inPassword" layoutX="24.0" layoutY="344.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="324.0" />
-      <Label layoutX="24.0" layoutY="146.0" prefHeight="17.0" prefWidth="61.0" text="Full Name" AnchorPane.topAnchor="129.0" />
-      <Label layoutX="24.0" layoutY="202.0" prefHeight="17.0" prefWidth="84.0" text="User Handle" AnchorPane.topAnchor="185.0" />
-      <Label layoutX="24.0" layoutY="255.0" prefHeight="25.0" prefWidth="84.0" text="Email Address" AnchorPane.topAnchor="238.0" />
-      <Label layoutX="24.0" layoutY="314.0" prefHeight="25.0" prefWidth="84.0" text="Password" AnchorPane.topAnchor="294.0" />
-      <Button fx:id="signUp" layoutX="70.0" layoutY="357.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="38.0" prefWidth="99.0" text="Sign Up" textFill="#515597">
+      <TextField fx:id="inName" layoutX="50.0" layoutY="154.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="154.0" />
+      <TextField fx:id="inHandle" layoutX="49.0" layoutY="210.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="210.0" />
+      <TextField fx:id="inEmail" layoutX="50.0" layoutY="265.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="265.0" />
+      <PasswordField fx:id="inPassword" layoutX="50.0" layoutY="324.0" prefHeight="25.0" prefWidth="212.0" AnchorPane.topAnchor="324.0" />
+      <Label layoutX="55.0" layoutY="129.0" prefHeight="17.0" prefWidth="61.0" text="Full Name" textFill="#f4eef8" AnchorPane.topAnchor="129.0" />
+      <Label layoutX="51.0" layoutY="185.0" prefHeight="17.0" prefWidth="84.0" text="User Handle" textFill="#f4eef8" AnchorPane.topAnchor="185.0" />
+      <Label layoutX="50.0" layoutY="238.0" prefHeight="25.0" prefWidth="84.0" text="Email Address" textFill="#f4eef8" AnchorPane.topAnchor="238.0" />
+      <Label layoutX="53.0" layoutY="294.0" prefHeight="25.0" prefWidth="84.0" text="Password" textFill="#f4eef8" AnchorPane.topAnchor="294.0" />
+      <Button fx:id="signUp" layoutX="95.0" layoutY="370.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="38.0" prefWidth="99.0" text="Sign Up" textFill="#515597">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Label layoutX="383.0" layoutY="102.0" prefHeight="21.0" prefWidth="140.0" text="Have An Account??" textFill="#404da3">
+      <Label layoutX="537.0" layoutY="102.0" prefHeight="21.0" prefWidth="140.0" text="Have An Account??" textFill="#0a1e90">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

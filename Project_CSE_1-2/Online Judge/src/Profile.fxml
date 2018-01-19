@@ -7,31 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profile">
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profile">
     <children>
-        <Label layoutX="149.0" layoutY="11.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="344.0">
+        <Label layoutX="239.0" layoutY="-50.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="350.0" AnchorPane.topAnchor="-50.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutX="21.0" layoutY="56.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+        <ButtonBar layoutY="37.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="37.0">
             <buttons>
-                <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="40.0" text="Home" textFill="#273286">
+                <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="41.0" text="Home" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="50.0" prefWidth="170.0" text="Contest" textFill="#273286">
+                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="41.0" prefWidth="170.0" text="Contest" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="problemset" mnemonicParsing="false" onAction="#Problemset" prefHeight="48.0" text="Problemset" textFill="#273286">
+                <Button fx:id="problemset" mnemonicParsing="false" onAction="#Problemset" prefHeight="41.0" text="Problemset" textFill="#273286">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="46.0" text="Discussion" textFill="#273284">
+                <Button fx:id="discussion" mnemonicParsing="false" onAction="#Discussion" prefHeight="41.0" text="Discussion" textFill="#273284">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -43,18 +43,18 @@
                 </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273382">
+        <Button fx:id="signOut" layoutX="698.0" layoutY="395.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273382">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Button>
-      <ImageView fx:id="image" fitHeight="172.0" fitWidth="213.0" layoutX="371.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="Name" layoutX="20.0" layoutY="165.0" prefHeight="40.0" prefWidth="299.0" text="Name">
+      <ImageView fx:id="image" fitHeight="178.0" fitWidth="213.0" layoutX="548.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="Name" layoutX="20.0" layoutY="171.0" prefHeight="40.0" prefWidth="299.0" text="Name">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <ButtonBar layoutY="110.0" prefHeight="40.0" prefWidth="260.0">
+      <ButtonBar layoutY="127.0" prefHeight="40.0" prefWidth="260.0">
         <buttons>
           <Button fx:id="HandleB" mnemonicParsing="false" onAction="#HandleB" text="Handle">
                <font>
@@ -73,17 +73,17 @@
             </Button>
         </buttons>
       </ButtonBar>
-      <Label fx:id="Email" layoutX="20.0" layoutY="217.0" prefHeight="17.0" prefWidth="299.0" text="Email">
+      <Label fx:id="Email" layoutX="20.0" layoutY="224.0" prefHeight="17.0" prefWidth="299.0" text="Email">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-      <Button fx:id="uploadImage" layoutX="425.0" layoutY="328.0" mnemonicParsing="false" onAction="#UploadImage" prefHeight="25.0" prefWidth="96.0" text="Upload Image" />
-      <Label fx:id="tried" layoutX="18.0" layoutY="273.0" prefHeight="31.0" prefWidth="230.0" text="Total Tried">
+      <Button fx:id="uploadImage" layoutX="615.0" layoutY="332.0" mnemonicParsing="false" onAction="#UploadImage" prefHeight="25.0" prefWidth="96.0" text="Upload Image" />
+      <Label fx:id="tried" layoutX="18.0" layoutY="329.0" prefHeight="31.0" prefWidth="230.0" text="Total Tried">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="solved" layoutX="18.0" layoutY="313.0" prefHeight="31.0" prefWidth="230.0" text="Total Solved">
+      <Label fx:id="solved" layoutX="18.0" layoutY="364.0" prefHeight="31.0" prefWidth="230.0" text="Total Solved">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

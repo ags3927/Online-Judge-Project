@@ -1,3 +1,5 @@
+import com.sun.org.apache.xerces.internal.parsers.CachingParserPool;
+
 import java.io.*;
 
 public class ReadThreadServer implements Runnable{
@@ -10,7 +12,7 @@ public class ReadThreadServer implements Runnable{
 
     @Override
     public void run() {
-        while (true) {
+        while (true)  {
             Object object = nc.read();
             SubmitData temp = null;
             if (object instanceof LogInData){
