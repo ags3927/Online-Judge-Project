@@ -78,11 +78,11 @@ public class ProcessExecutor {
             inputGobbler.start();
             outputGobbler.start();
             boolean finished = proc.waitFor(1, TimeUnit.SECONDS);
-            System.out.println(finished);
+            //System.out.println(finished);
             if(!finished){ exitVal = -2; }
             else {exitVal = proc.waitFor();}
             exitVal = proc.waitFor();
-            System.out.println("ExitValue for "+ processName +" : " + exitVal);
+            //System.out.println("ExitValue for "+ processName +" : " + exitVal);
             fis.close();
             fos.flush();
             fos.close();
@@ -128,8 +128,8 @@ public class ProcessExecutor {
             e.printStackTrace();
         }
 
-        System.out.println(userSol);
-        System.out.println(sysSol);
+        //System.out.println(userSol);
+        //System.out.println(sysSol);
 
         int temp;
         if(p2!=null){temp=p2.exitVal;}

@@ -22,6 +22,11 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
+                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="41.0" prefWidth="170.0" text="Contest" textFill="#273284">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
                 <Button fx:id="problemset" mnemonicParsing="false" onAction="#Problemset" prefHeight="41.0" text="Problemset" textFill="#273284">
                     <font>
                         <Font name="System Bold" size="15.0" />
@@ -33,11 +38,6 @@
                     </font>
                 </Button>
                 <Button fx:id="profile" mnemonicParsing="false" onAction="#Profile" prefHeight="41.0" text="Profile" textFill="#273382">
-                    <font>
-                        <Font name="System Bold" size="15.0" />
-                    </font>
-                </Button>
-                <Button fx:id="contest" mnemonicParsing="false" onAction="#Contest" prefHeight="41.0" prefWidth="170.0" text="Contest" textFill="#273284">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
