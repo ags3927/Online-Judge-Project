@@ -51,15 +51,15 @@ public class SignUpIn {
         String loginNameText = loginName.getText();
         String pass = password.getText();
         boolean b = false;
-
-        Socket socket = new Socket("127.0.0.1", 53333);
-        ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-        ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+        NetworkUtil temp = Communication.get();
         LogInData logInData = new LogInData(loginNameText,pass);
-        oos.writeObject(logInData);
-        String info = ois.readObject().toString();
+        temp.write(logInData);
+        String info;
+        do{
+            info = (String) temp.read();
+        }while(info==null);
 
-        if (info.equals("Found")==false){
+        if (!info.equals("Found")){
             b = true;
             try {
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data.txt"));
@@ -69,8 +69,6 @@ public class SignUpIn {
                 e.printStackTrace();
             }
         }
-        socket.close();
-
 
         if(b){
             Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
@@ -92,8 +90,8 @@ public class SignUpIn {
 
     @FXML
     void SignUp(ActionEvent event) throws IOException, ClassNotFoundException {
+        NetworkUtil temp = Communication.get();
         String email,name,handle,password;
-
         email = inEmail.getText();
         name = inName.getText();
         handle = inHandle.getText();
@@ -105,13 +103,9 @@ public class SignUpIn {
             return;
         }
 
-        Socket socket = new Socket("127.0.0.1", 53333);
-        ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-        ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
         SignUpData signUpData = new SignUpData(name,handle,email,password);
-        oos.writeObject(signUpData);
-        b = ois.readObject();
-        socket.close();
+        temp.write(signUpData);
+        b = temp.read();
 
         if(b != null){
             try {

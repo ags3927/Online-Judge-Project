@@ -34,6 +34,8 @@ public class NetworkUtil {
             o = ois.readObject();
         } catch (Exception e) {
             //System.out.println("Reading Error in network : " + e.toString());
+            System.out.println("Reading Error in network : " + e.toString());
+
         }
         return o;
     }
