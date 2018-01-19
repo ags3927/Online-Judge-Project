@@ -21,12 +21,15 @@ public class Main extends Application {
 
 
     public static void main(String[] args){
+        NetworkUtil nc = null;
         try {
-            NetworkUtil nc = new NetworkUtil(new Socket("127.0.0.1", 53333));
+            nc = new NetworkUtil(new Socket("127.0.0.1", 53333));
             new Communication(nc);
         } catch (IOException e) {
             e.printStackTrace();
         }
         launch(args);
+        nc.write("BreakUp");
+        nc.closeConnection();
     }
 }

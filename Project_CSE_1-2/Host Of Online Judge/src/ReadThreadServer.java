@@ -46,6 +46,9 @@ public class ReadThreadServer implements Runnable{
                     e.printStackTrace();
                 }
             }
+            if (object.toString().equals("BreakUp")){
+                nc.closeConnection();
+            }
         }
     }
 

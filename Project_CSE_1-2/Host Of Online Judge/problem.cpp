@@ -1,85 +1,64 @@
-#include <cstdio>
-#include <cstring>
-#include <cstdlib>
-#include <algorithm>
-#include <complex>
+#include<bits/stdc++.h>
 using namespace std;
 
-#define FR(i, a, b) for(int i = (a); i < (b); ++i)
-#define FOR(i, n) FR(i, 0, n)
-#define MP make_pair
-#define A first
-#define B second
+#define Max 100001
+#define cnd1 ((a==3 && b==2) || (a==2 && b==1) || (a==1 && b==3))
+#define cnd2 ((b==3 && a==2) || (b==2 && a==1) || (b==1 && a==3))
+unsigned long long pnt[Max][2],al[4][4],bb[4][4],ta,tb;
 
-typedef long long ll;
-typedef complex<ll> pnt;
+int main()
+{
+    unsigned long long k,a,b,i,j,l,m,n,x,y;
 
-const int MAXN = 400;
+    cin>> k >> a >> b;
 
-#define X real
-#define Y imag
+    for(i=1;i<4;i++)
+        for(j=1;j<4;j++)
+            cin>> al[i][j];
+    for(i=1;i<4;i++)
+        for(j=1;j<4;j++)
+            cin>> bb[i][j];
 
-pnt lis[MAXN];
-int n;
-int num[MAXN][MAXN];
-int ans[MAXN];
+    i=1,l=a,m=b;
+    if(a==b)
+        pnt[i][0]=0,pnt[i][1]=0,i++;
+    else if(cnd1)
+        pnt[i][0]=1,pnt[i][1]=0,ta++,i++;
+    else if(cnd2)
+        pnt[i][0]=0,pnt[i][1]=1,tb++,i++;
+    while(1){
+        x=al[a][b],y=bb[a][b],a=x,b=y;
 
-ll cross(pnt a, pnt b) {
-  return imag(conj(a) * b);
-}
+        if(a==b)
+            pnt[i][0]=0,pnt[i][1]=0;
+        else if(cnd1)
+            pnt[i][0]=1,pnt[i][1]=0,ta++;
+        else if(cnd2)
+            pnt[i][0]=0,pnt[i][1]=1,tb++;
 
-pnt getPoint() {
-  int x, y;
-  scanf("%d%d", &x, &y);
-  return pnt(x, y);
-}
 
-int below(int i, int j) {
-  return (X(lis[i]) == X(lis[j])) && (Y(lis[i]) < Y(lis[j]));
-}
+        if(a==l && b==m)
+            break;
 
-int betweenBelow(int i, int j, int x) {
-  if (X(lis[i]) < X(lis[j])) {
-    return X(lis[i]) < X(lis[x])  && X(lis[x]) < X(lis[j]) &&
-      cross(lis[j] - lis[i], lis[x] - lis[i]) < 0;
-  } else {
-    return X(lis[j]) < X(lis[x])  && X(lis[x]) < X(lis[i]) &&
-      cross(lis[i] - lis[j], lis[x] - lis[j]) < 0;
-  }
-}
-
-int main() {
-  scanf("%d", &n);
-  FOR(i, n) {
-    lis[i] = getPoint();
-  }
-
-  memset(num, 0, sizeof(num));
-  FOR(i, n) {
-    FOR(j, n) if(X(lis[i]) < X(lis[j])){
-      FOR(k, n) if(k != i && k != j) {
-        if(below(k, i)) num[i][j]++;
-        if(below(k, j)) num[i][j]++;
-        if(betweenBelow(i, j, k)) {
-          num[i][j] += 2;
-        }
-      }
-      num[j][i] = -num[i][j];
+        i++;
     }
-  }
 
-  memset(ans, 0, sizeof(ans));
-  FOR(i, n) FOR(j, i) FOR(k, j) {
-    int temp = abs(num[i][j] + num[j][k] + num[k][i]) / 2;
-    temp -= betweenBelow(i, j, k);
-    temp -= betweenBelow(j, k, i);
-    temp -= betweenBelow(k, i, j);
-    ans[temp]++;
-  }
 
-  FOR(i, n - 2) {
-    printf("%d\n", ans[i]);
-  }
-  return 0;
+
+    unsigned long long cnt1,cnt2;
+    cnt1=(k/i)*ta,cnt2=(k/i)*tb;
+
+    if(i<=k)
+        x=k%i;
+    else
+        x=k;
+
+    for(i=1;i<=x;i++){
+        cnt1+=pnt[i][0],cnt2+=pnt[i][1];
+    }
+
+    cout<< cnt1 << ' ' << cnt2 << endl;
+
+    return 0;
 }
 
