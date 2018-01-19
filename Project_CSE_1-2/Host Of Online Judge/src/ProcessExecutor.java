@@ -105,19 +105,19 @@ public class ProcessExecutor {
         String data = sub.getSubmission();
         bw.write(data+"\n");
         bw.close();
-        File file1  = new File("b.exe");
-        if(file1.exists()){ file1.delete();}
-        //ProcessExecutor p1 = new ProcessExecutor("g++ -o b problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+        /*File file1  = new File("b.exe");
+        if(file1.exists()){ file1.delete();}*/
+        ProcessExecutor p1 = new ProcessExecutor("g++ problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
         Runtime rt = Runtime.getRuntime();
-        rt.exec("g++ -o b problem.cpp");
+        //rt.exec("g++ -o b problem.cpp");
         ProcessExecutor p2 = null;
-        File file = new File("b.exe");
+        File file = new File("a.exe");
         boolean exists = file.exists();
         if(!exists){
             System.out.println("Compilation Error.");
             return;
         }
-        p2 = new ProcessExecutor("b.exe", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt", "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+        p2 = new ProcessExecutor("a.exe", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt", "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
         String userSol = null;
         try {
             userSol = readFile("E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");

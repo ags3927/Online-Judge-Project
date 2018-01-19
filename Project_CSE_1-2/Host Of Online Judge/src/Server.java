@@ -12,8 +12,8 @@ public class Server {
     static ArrayList<String>lang = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
+        ServerSocket serverSocket = new ServerSocket(53333);
         while (true) {
-            ServerSocket serverSocket = new ServerSocket(53333);
             Socket socket = serverSocket.accept();
             NetworkUtil nc = new NetworkUtil(socket);
             new ReadThreadServer(nc);
