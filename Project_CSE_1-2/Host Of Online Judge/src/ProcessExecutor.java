@@ -1,9 +1,9 @@
-
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
+
 
 class StreamGobbler implements Runnable {
     InputStream is;
@@ -98,7 +98,7 @@ public class ProcessExecutor {
         return new String(encoded, Charset.defaultCharset());
     }
 
-    void Compilation(SubmitData sub) throws Exception {
+    public int CompilationCpp(SubmitData sub) throws Exception {
 
         BufferedWriter bw = new BufferedWriter(new FileWriter("problem.cpp"));
         String data = sub.getSubmission();
@@ -112,8 +112,10 @@ public class ProcessExecutor {
         boolean exists = file.exists();
         if(!exists){
             System.out.println("Compilation Error.");
-            return;
+            return -3;
         }
+        File file3 = new File("out.txt");
+        if(file3.exists()){file3.delete();}
         p2 = new ProcessExecutor("a.exe", "in.txt", "out.txt");
         String userSol = null;
         try {
@@ -135,8 +137,54 @@ public class ProcessExecutor {
         if(p2!=null){temp=p2.exitVal;}
         else{temp=0;}
         System.out.println(temp);
+        return getVerdict(userSol, sysSol, temp);
+    }
+
+    public int CompilationJava(SubmitData sub) throws IOException {
+        String data = sub.getSubmission();
+        BufferedWriter bw = new BufferedWriter(new FileWriter("MyProblem.java"));
+        bw.write(data+"\n");
+        bw.close();
+        File file1 = new File("MyProblem.jar");
+        if(file1.exists()){file1.delete();}
+        ProcessExecutor p1 = new ProcessExecutor("javac MyProblem.java", "input.txt", "output.txt");
+        ProcessExecutor p2 = new ProcessExecutor("jar cfm MyProblem.jar manifest.txt MyProblem.class", "input.txt", "output.txt");
+        File file = new File("MyProblem.jar");
+        if(!file.exists()) {
+            System.out.println("Compilation Error.");
+            return -3;
+        }
+        File file2 = new File("output.txt");
+        if(file2.exists()){file2.delete();}
+        ProcessExecutor p3 = new ProcessExecutor("java -jar MyProblem.jar", "input.txt", "output.txt");
+        String userSol = null;
+        try {
+            userSol = readFile("output.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String sysSol = null;
+        try {
+            sysSol = readFile("solution.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //System.out.println(userSol);
+        //System.out.println(sysSol);
+
+        int temp;
+        if(p2!=null){temp=p2.exitVal;}
+        else{temp=0;}
+        System.out.println(temp);
+        return getVerdict(userSol, sysSol, temp);
+    }
+
+    int getVerdict(String userSol, String sysSol, int temp)
+    {
         if(userSol.equals(sysSol)){
             System.out.println("Correct Answer.");
+            return 0;
         }
         else
         {
@@ -144,12 +192,13 @@ public class ProcessExecutor {
             {
                 case 0:
                     System.out.println("Wrong Answer.");
-                    break;
+                    return -1;
                 case -2:
                     System.out.println("TLE");
-                    break;
+                    return -2;
                 default:
                     System.out.println("RTE");
+                    return 1;
             }
         }
     }

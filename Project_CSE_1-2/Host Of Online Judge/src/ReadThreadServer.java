@@ -1,6 +1,7 @@
 import com.sun.org.apache.xerces.internal.parsers.CachingParserPool;
 
 import java.io.*;
+import java.util.concurrent.ExecutorService;
 
 public class ReadThreadServer implements Runnable{
     NetworkUtil nc;
@@ -38,18 +39,62 @@ public class ReadThreadServer implements Runnable{
             }
             if(object instanceof SubmitData) {
                 temp = (SubmitData) object;
+                String lang = temp.getLanguage();
+                if(lang.equalsIgnoreCase("C++")||lang.equalsIgnoreCase("C")) {
+                    synchronized (this){
 
-                ProcessExecutor processExecutor = new ProcessExecutor();
-                try {
-                    processExecutor.Compilation(temp);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                        ProcessExecutor processExecutor = new ProcessExecutor();
+                        try {
+                            int verdictVal = processExecutor.CompilationCpp(temp);
+                            String verdict = null;
+                            verdict = verdictSet(verdictVal, verdict);
+                            nc.write(new VerdictData(verdict, temp.getProblem()));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+                else if(lang.equalsIgnoreCase("Java")){
+                    synchronized (this) {
+                        ProcessExecutor processExecutor = new ProcessExecutor();
+                        try {
+                            int verdictVal = processExecutor.CompilationJava(temp);
+                            String verdict = null;
+                            verdict = verdictSet(verdictVal, verdict);
+                            nc.write(new VerdictData(verdict, temp.getProblem()));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
             }
             if (object.toString().equals("BreakUp")){
                 nc.closeConnection();
             }
         }
+    }
+
+    private String verdictSet(int verdictVal, String verdict) {
+        if(verdictVal==0) {
+            verdict = "Correct Answer";
+        }
+        else if (verdictVal==-1)
+        {
+            verdict = "Wrong Answer";
+        }
+        else if(verdictVal==-3)
+        {
+            verdict = "Compilation Error";
+        }
+        else if(verdictVal==1)
+        {
+            verdict = "Runtime Error";
+        }
+        else if(verdictVal==-2)
+        {
+            verdict = "Time Limit Exceeded";
+        }
+        return verdict;
     }
 
     private static String SignIn(String loginNameText, String pass) throws IOException {
