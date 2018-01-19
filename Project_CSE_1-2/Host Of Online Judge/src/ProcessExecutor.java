@@ -78,11 +78,11 @@ public class ProcessExecutor {
             inputGobbler.start();
             outputGobbler.start();
             boolean finished = proc.waitFor(1, TimeUnit.SECONDS);
-            //System.out.println(finished);
+            System.out.println(finished);
             if(!finished){ exitVal = -2; }
             else {exitVal = proc.waitFor();}
             exitVal = proc.waitFor();
-            //System.out.println("ExitValue for "+ processName +" : " + exitVal);
+            System.out.println("ExitValue for "+ processName +" : " + exitVal);
             fis.close();
             fos.flush();
             fos.close();
@@ -90,7 +90,6 @@ public class ProcessExecutor {
             e.printStackTrace();
         }
 
-        //6
     }
 
     static String readFile(String path) throws IOException
@@ -105,28 +104,26 @@ public class ProcessExecutor {
         String data = sub.getSubmission();
         bw.write(data+"\n");
         bw.close();
-        File file1  = new File("b.exe");
+        File file1  = new File("a.exe");
         if(file1.exists()){ file1.delete();}
-        //ProcessExecutor p1 = new ProcessExecutor("g++ -o b problem.cpp", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt" , "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
-        Runtime rt = Runtime.getRuntime();
-        rt.exec("g++ -o b problem.cpp");
+        ProcessExecutor p1 = new ProcessExecutor("g++ problem.cpp", "in.txt" , "out.txt");
         ProcessExecutor p2 = null;
-        File file = new File("b.exe");
+        File file = new File("a.exe");
         boolean exists = file.exists();
         if(!exists){
             System.out.println("Compilation Error.");
             return;
         }
-        p2 = new ProcessExecutor("b.exe", "E:\\Project_CSE_1-2\\Host Of Online Judge\\in.txt", "E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+        p2 = new ProcessExecutor("a.exe", "in.txt", "out.txt");
         String userSol = null;
         try {
-            userSol = readFile("E:\\Project_CSE_1-2\\Host Of Online Judge\\out.txt");
+            userSol = readFile("out.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
         String sysSol = null;
         try {
-            sysSol = readFile("E:\\Project_CSE_1-2\\Host Of Online Judge\\sol.txt");
+            sysSol = readFile("sol.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
