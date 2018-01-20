@@ -20,9 +20,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
@@ -70,8 +69,18 @@ public class Problem {
     private Label output;
 
     @FXML
+    private TableView<HistoryCls> table;
+
+    @FXML
+    private TableColumn<HistoryCls, String> lang;
+
+    @FXML
+    private TableColumn<HistoryCls, String > verdict;
+
+    @FXML
     private Label filename;
-    public String lang;
+
+    public String langx;
     public File file;
 
     @FXML
@@ -145,11 +154,11 @@ public class Problem {
     @FXML
     void Submit(ActionEvent event) throws IOException {
         output.setText("Judging....");
-        lang = chooseLang.getValue();
+        langx = chooseLang.getValue();
         if(file != null && lang != null) {
             NetworkUtil temp = Communication.get();
             String submission = readFile(file);
-            temp.write(new SubmitData(submission, lang, counter));
+            temp.write(new SubmitData(submission, langx, counter));
             try {
                 BufferedReader br = new BufferedReader(new FileReader("data.txt"));
                 String data = br.readLine();
@@ -188,6 +197,9 @@ public class Problem {
         assert chooseFile != null : "fx:id=\"chooseFile\" was not injected: check your FXML file 'Problem.fxml'.";
         assert submit != null : "fx:id=\"submit\" was not injected: check your FXML file 'Problem.fxml'.";
         assert output != null : "fx:id=\"output\" was not injected: check your FXML file 'Problem.fxml'.";
+        assert table != null : "fx:id=\"table\" was not injected: check your FXML file 'Problem.fxml'.";
+        assert lang != null : "fx:id=\"lang\" was not injected: check your FXML file 'Problem.fxml'.";
+        assert verdict != null : "fx:id=\"verdict\" was not injected: check your FXML file 'Problem.fxml'.";
 
         ObservableList<String>list = FXCollections.observableArrayList("C","C++","JAVA");
         chooseLang.setItems(list);
@@ -212,7 +224,9 @@ public class Problem {
         }
         problemDetails.setText(statement);
 
-        String verdict = null;
+        ObservableList<HistoryCls>historyCls = FXCollections.observableArrayList();
+        String verdictx = null;
+        boolean ac=false;
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("history.txt"));
             while (true){
@@ -220,16 +234,26 @@ public class Problem {
                 if (data == null)
                     break;
                 String s[] = data.split("\t\t");
-                if (s[1].equals(counter))
-                    verdict = s[2];
+                if (s[1].equals(counter)) {
+                    if (s[2].equals("Accepted"))
+                        ac=true;
+                    historyCls.add(new HistoryCls(s[0],s[1],s[2]));
+                    verdictx = s[2];
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (verdict == null)
+
+        lang.setCellValueFactory(new PropertyValueFactory<>("Lang"));
+        verdict.setCellValueFactory(new PropertyValueFactory<>("Verdict"));
+        table.setItems(historyCls);
+        if (ac)
+            verdictx = "Accepted";
+        if (verdictx == null)
             output.setText("Unsolved");
         else
-            output.setText(verdict);
+            output.setText(verdictx);
     }
 
     static String readFile(File file) throws IOException
