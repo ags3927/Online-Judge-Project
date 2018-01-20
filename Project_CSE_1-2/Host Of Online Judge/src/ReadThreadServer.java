@@ -12,7 +12,6 @@ public class ReadThreadServer implements Runnable{
         new Thread(this).start();
     }
 
-    @Override
     public void run() {
         while (true)  {
             Object object = nc.read();

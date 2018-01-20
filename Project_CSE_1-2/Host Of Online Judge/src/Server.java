@@ -9,7 +9,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Server {
     static int num=0;
-    static ArrayList<String>lang = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
         ServerSocket serverSocket = new ServerSocket(53333);

@@ -238,4 +238,3 @@ public class Problem {
         return new String(encoded, Charset.defaultCharset());
     }
 }
-
