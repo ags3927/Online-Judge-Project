@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyIntegerWrapper;
 import javafx.beans.property.ReadOnlySetWrapper;
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class Submission {
@@ -53,16 +55,16 @@ public class Submission {
     private Button blog;
 
     @FXML
-    private TableView<Integer> table;
+    private TableView<HistoryCls> table;
 
     @FXML
-    private TableColumn<Integer, String> problem;
+    private TableColumn<HistoryCls, String> problem;
 
     @FXML
-    private TableColumn<Integer, String> lang;
+    private TableColumn<HistoryCls, String> lang;
 
     @FXML
-    private TableColumn<Integer, String> verdict;
+    private TableColumn<HistoryCls, String> verdict;
 
     @FXML
     private Button signOut;
@@ -162,9 +164,7 @@ public class Submission {
         assert signOut != null : "fx:id=\"signOut\" was not injected: check your FXML file 'Submission.fxml'.";
 
         try {
-            List<String> l = new ArrayList<>();
-            List<String> p = new ArrayList<>();
-            List<String> v = new ArrayList<>();
+            ObservableList<HistoryCls>historyCls = FXCollections.observableArrayList();
             BufferedReader br = new BufferedReader(new FileReader("history.txt"));
             while (true){
                 String data = br.readLine();
@@ -172,25 +172,16 @@ public class Submission {
                     break;
 
                 String s[] = data.split("\t\t");
-                l.add(s[0]);
-                p.add(s[1]);
-                v.add(s[2]);
+                historyCls.add(new HistoryCls(s[0],s[1],s[2]));
             }
-            lang.setCellValueFactory(cellData -> {
-                Integer rowIndex = cellData.getValue();
-                return new ReadOnlyStringWrapper((l.get(rowIndex)));
-            });
-            problem.setCellValueFactory(cellData -> {
-                Integer rowIndex = cellData.getValue();
-                return new ReadOnlyStringWrapper((p.get(rowIndex)));
-            });
-            verdict.setCellValueFactory(cellData -> {
-                Integer rowIndex = cellData.getValue();
-                return new ReadOnlyStringWrapper((v.get(rowIndex)));
-            });
-            System.out.println(l.get(0));
+
+            lang.setCellValueFactory(new PropertyValueFactory<>("Lang"));
+            problem.setCellValueFactory(new PropertyValueFactory<>("Problem"));
+            verdict.setCellValueFactory(new PropertyValueFactory<>("Verdict"));
+            table.setItems(historyCls);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
