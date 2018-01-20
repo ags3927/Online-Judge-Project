@@ -76,7 +76,7 @@ public class ReadThreadServer implements Runnable{
 
     private String verdictSet(int verdictVal, String verdict) {
         if(verdictVal==0) {
-            verdict = "Correct Answer";
+            verdict = "Accepted";
         }
         else if (verdictVal==-1)
         {

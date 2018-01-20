@@ -65,6 +65,9 @@ public class Problem {
     private Button submit;
 
     @FXML
+    private Label output;
+
+    @FXML
     private Label filename;
     public String lang;
     public File file;
@@ -139,11 +142,14 @@ public class Problem {
 
     @FXML
     void Submit(ActionEvent event) throws IOException {
+        output.setText("Judging....");
         lang = chooseLang.getValue();
         if(file != null && lang != null) {
             NetworkUtil temp = Communication.get();
             String submission = readFile(file);
             temp.write(new SubmitData(submission, lang, counter));
+            VerdictData verdictData = (VerdictData) temp.read();
+            output.setText(verdictData.getVerdict());
         }
     }
 
@@ -161,6 +167,7 @@ public class Problem {
         assert chooseLang != null : "fx:id=\"chooseLang\" was not injected: check your FXML file 'Problem.fxml'.";
         assert chooseFile != null : "fx:id=\"chooseFile\" was not injected: check your FXML file 'Problem.fxml'.";
         assert submit != null : "fx:id=\"submit\" was not injected: check your FXML file 'Problem.fxml'.";
+        assert output != null : "fx:id=\"output\" was not injected: check your FXML file 'Problem.fxml'.";
 
         ObservableList<String>list = FXCollections.observableArrayList("C++","JAVA");
         chooseLang.setItems(list);

@@ -58,7 +58,7 @@
       <Button fx:id="chooseFile" layoutX="644.0" layoutY="231.0" mnemonicParsing="false" onAction="#ChooseFile" prefHeight="25.0" prefWidth="78.0" text="Choose File" />
       <Button fx:id="submit" layoutX="643.0" layoutY="267.0" mnemonicParsing="false" onAction="#Submit" prefHeight="25.0" prefWidth="150.0" text="Submit" textFill="#1e2280" />
       <Label fx:id="filename" layoutX="732.0" layoutY="236.0" prefHeight="17.0" prefWidth="65.0" text="Blank" textFill="#20168d" />
-      <Label layoutX="682.0" layoutY="305.0" prefHeight="17.0" prefWidth="78.0" text="Unsolved" textFill="#d02429" AnchorPane.leftAnchor="682.0" AnchorPane.topAnchor="305.0">
+      <Label fx:id="output" layoutX="682.0" layoutY="305.0" prefHeight="17.0" prefWidth="120.0" text="Unsolved" textFill="#d02429" AnchorPane.leftAnchor="682.0" AnchorPane.topAnchor="305.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
