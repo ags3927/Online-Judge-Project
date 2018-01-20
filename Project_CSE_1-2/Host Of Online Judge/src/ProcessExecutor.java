@@ -78,10 +78,11 @@ public class ProcessExecutor {
             inputGobbler.start();
             outputGobbler.start();
             boolean finished = proc.waitFor(1, TimeUnit.SECONDS);
-            //System.out.println(finished);
+            System.out.println(finished);
             if(!finished){ exitVal = -2; }
             else { exitVal = proc.waitFor(); }
-            //System.out.println("ExitValue for "+ processName +" : " + exitVal);
+            exitVal = proc.waitFor();
+            System.out.println("ExitValue for "+ processName +" : " + exitVal);
             fis.close();
             fos.flush();
             fos.close();

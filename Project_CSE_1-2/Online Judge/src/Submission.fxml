@@ -67,7 +67,7 @@
         <columns>
           <TableColumn fx:id="problem" prefWidth="75.0" text="Problem" />
           <TableColumn fx:id="lang" prefWidth="75.0" text="Lang" />
-            <TableColumn fx:id="time" prefWidth="75.0" text="Submission Time" />
+            <TableColumn fx:id="verdict" prefWidth="75.0" text="Verdict" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

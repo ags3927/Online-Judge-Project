@@ -1,6 +1,14 @@
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import javafx.beans.property.ReadOnlyIntegerWrapper;
+import javafx.beans.property.ReadOnlySetWrapper;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,16 +53,16 @@ public class Submission {
     private Button blog;
 
     @FXML
-    private TableView<?> table;
+    private TableView<Integer> table;
 
     @FXML
-    private TableColumn<?, ?> problem;
+    private TableColumn<Integer, String> problem;
 
     @FXML
-    private TableColumn<?, ?> lang;
+    private TableColumn<Integer, String> lang;
 
     @FXML
-    private TableColumn<?, ?> time;
+    private TableColumn<Integer, String> verdict;
 
     @FXML
     private Button signOut;
@@ -150,8 +158,39 @@ public class Submission {
         assert table != null : "fx:id=\"table\" was not injected: check your FXML file 'Submission.fxml'.";
         assert problem != null : "fx:id=\"problem\" was not injected: check your FXML file 'Submission.fxml'.";
         assert lang != null : "fx:id=\"lang\" was not injected: check your FXML file 'Submission.fxml'.";
-        assert time != null : "fx:id=\"time\" was not injected: check your FXML file 'Submission.fxml'.";
+        assert verdict != null : "fx:id=\"time\" was not injected: check your FXML file 'Submission.fxml'.";
         assert signOut != null : "fx:id=\"signOut\" was not injected: check your FXML file 'Submission.fxml'.";
 
+        try {
+            List<String> l = new ArrayList<>();
+            List<String> p = new ArrayList<>();
+            List<String> v = new ArrayList<>();
+            BufferedReader br = new BufferedReader(new FileReader("history.txt"));
+            while (true){
+                String data = br.readLine();
+                if(data == null)
+                    break;
+
+                String s[] = data.split("\t\t");
+                l.add(s[0]);
+                p.add(s[1]);
+                v.add(s[2]);
+            }
+            lang.setCellValueFactory(cellData -> {
+                Integer rowIndex = cellData.getValue();
+                return new ReadOnlyStringWrapper((l.get(rowIndex)));
+            });
+            problem.setCellValueFactory(cellData -> {
+                Integer rowIndex = cellData.getValue();
+                return new ReadOnlyStringWrapper((p.get(rowIndex)));
+            });
+            verdict.setCellValueFactory(cellData -> {
+                Integer rowIndex = cellData.getValue();
+                return new ReadOnlyStringWrapper((v.get(rowIndex)));
+            });
+            System.out.println(l.get(0));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

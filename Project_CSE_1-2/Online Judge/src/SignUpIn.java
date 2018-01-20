@@ -58,6 +58,7 @@ public class SignUpIn {
         do{
             info = (String) temp.read();
         }while(info==null);
+        SubmissionHistory submissionHistory = (SubmissionHistory) temp.read();
 
         if (!info.equals("Found")){
             b = true;
@@ -71,6 +72,14 @@ public class SignUpIn {
         }
 
         if(b){
+            try {
+                BufferedWriter bw = new BufferedWriter(new FileWriter("history.txt"));
+                bw.write(submissionHistory.getAll());
+                bw.close();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+
             Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -106,6 +115,7 @@ public class SignUpIn {
         SignUpData signUpData = new SignUpData(name,handle,email,password);
         temp.write(signUpData);
         b = temp.read();
+        SubmissionHistory submissionHistory = (SubmissionHistory) temp.read();
 
         if(b != null){
             try {
@@ -128,6 +138,14 @@ public class SignUpIn {
         inPassword.setText(null);
 
         if (b != null){
+            try {
+                BufferedWriter bw = new BufferedWriter(new FileWriter("history.txt"));
+                bw.write(submissionHistory.getAll());
+                bw.close();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+
             Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

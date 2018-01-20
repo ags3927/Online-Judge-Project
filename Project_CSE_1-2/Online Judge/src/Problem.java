@@ -4,12 +4,14 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.BufferUnderflowException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.InputMismatchException;
 import java.util.ResourceBundle;
 
+import com.sun.xml.internal.stream.buffer.XMLStreamBufferResult;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -148,8 +150,26 @@ public class Problem {
             NetworkUtil temp = Communication.get();
             String submission = readFile(file);
             temp.write(new SubmitData(submission, lang, counter));
+            try {
+                BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+                String data = br.readLine();
+                br.close();
+                String s[] = data.split("\t\t");
+                temp.write(s[1]);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
             VerdictData verdictData = (VerdictData) temp.read();
             output.setText(verdictData.getVerdict());
+
+            SubmissionHistory submissionHistory = (SubmissionHistory) temp.read();
+            try {
+                BufferedWriter bw = new BufferedWriter(new FileWriter("history.txt"));
+                bw.write(submissionHistory.getAll());
+                bw.close();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
@@ -190,9 +210,26 @@ public class Problem {
         } catch (Exception e){
             e.printStackTrace();
         }
-
-
         problemDetails.setText(statement);
+
+        String verdict = null;
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("history.txt"));
+            while (true){
+                String data = bufferedReader.readLine();
+                if (data == null)
+                    break;
+                String s[] = data.split("\t\t");
+                if (s[1].equals(counter))
+                    verdict = s[2];
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (verdict == null)
+            output.setText("Unsolved");
+        else
+            output.setText(verdict);
     }
 
     static String readFile(File file) throws IOException
