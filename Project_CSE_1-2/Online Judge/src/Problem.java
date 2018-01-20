@@ -169,7 +169,7 @@ public class Problem {
         assert submit != null : "fx:id=\"submit\" was not injected: check your FXML file 'Problem.fxml'.";
         assert output != null : "fx:id=\"output\" was not injected: check your FXML file 'Problem.fxml'.";
 
-        ObservableList<String>list = FXCollections.observableArrayList("C++","JAVA");
+        ObservableList<String>list = FXCollections.observableArrayList("C","C++","JAVA");
         chooseLang.setItems(list);
 
         String statement="";

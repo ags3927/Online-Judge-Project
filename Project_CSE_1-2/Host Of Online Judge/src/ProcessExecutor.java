@@ -80,8 +80,7 @@ public class ProcessExecutor {
             boolean finished = proc.waitFor(1, TimeUnit.SECONDS);
             //System.out.println(finished);
             if(!finished){ exitVal = -2; }
-            else {exitVal = proc.waitFor();}
-            exitVal = proc.waitFor();
+            else { exitVal = proc.waitFor(); }
             //System.out.println("ExitValue for "+ processName +" : " + exitVal);
             fis.close();
             fos.flush();
@@ -135,7 +134,7 @@ public class ProcessExecutor {
 
         int temp;
         if(p2!=null){temp=p2.exitVal;}
-        else{temp=0;}
+        else{temp=-1;}
         System.out.println(temp);
         return getVerdict(userSol, sysSol, temp);
     }
@@ -154,6 +153,7 @@ public class ProcessExecutor {
             System.out.println("Compilation Error.");
             return -3;
         }
+        System.out.println("poop");
         File file2 = new File("output.txt");
         if(file2.exists()){file2.delete();}
         ProcessExecutor p3 = new ProcessExecutor("java -jar MyProblem.jar", "input.txt", "output.txt");
@@ -175,7 +175,7 @@ public class ProcessExecutor {
 
         int temp;
         if(p2!=null){temp=p2.exitVal;}
-        else{temp=0;}
+        else{temp=-1;}
         System.out.println(temp);
         return getVerdict(userSol, sysSol, temp);
     }

@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <algorithm>
 #include <complex>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define FR(i, a, b) for(int i = (a); i < (b); ++i)
@@ -76,10 +77,10 @@ int main() {
     temp -= betweenBelow(k, i, j);
     ans[temp]++;
   }
-
-  FOR(i, n - 2) {
+  cout<<1;
+  /*FOR(i, n - 2) {
     printf("%d\n", ans[i]);
-  }
+  }*/
   return 0;
 }
 
