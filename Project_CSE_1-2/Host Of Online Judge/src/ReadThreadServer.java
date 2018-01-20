@@ -46,6 +46,7 @@ public class ReadThreadServer implements Runnable{
                 String handle = ((SignUpData) object).getHandle();
                 String password = ((SignUpData) object).getPassword();
                 Object b = SignUp(email, name, handle, password);
+                nc.write(b);
                 try {
                     File file = new File(handle+".txt");
                     SubmissionHistory submissionHistory = new SubmissionHistory(file);
@@ -53,7 +54,6 @@ public class ReadThreadServer implements Runnable{
                 } catch (Exception e){
                     e.printStackTrace();
                 }
-                nc.write(b);
             }
             if(object instanceof SubmitData) {
                 temp = (SubmitData) object;
