@@ -1,86 +1,34 @@
-#include <cstdio>
-#include <cstring>
-#include <cstdlib>
-#include <algorithm>
-#include <complex>
-#include <bits/stdc++.h>
-using namespace std;
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: problem - Copy - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\DELL\AppData\Local\Temp\RSP64B4.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/problem - Copy.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Project_CSE_1-2\problem - Copy.cpp"
+]
+Creating command line "cl.exe @C:\Users\DELL\AppData\Local\Temp\RSP64B4.tmp" 
+<h3>Output Window</h3>
+Compiling...
+problem - Copy.cpp
+e:\project_cse_1-2\problem - copy.cpp(14) : error C2632: 'long' followed by 'long' is illegal
+e:\project_cse_1-2\problem - copy.cpp(59) : error C2374: 'i' : redefinition; multiple initialization
+        e:\project_cse_1-2\problem - copy.cpp(54) : see declaration of 'i'
+e:\project_cse_1-2\problem - copy.cpp(73) : error C2374: 'i' : redefinition; multiple initialization
+        e:\project_cse_1-2\problem - copy.cpp(54) : see declaration of 'i'
+e:\project_cse_1-2\problem - copy.cpp(80) : error C2065: 'cout' : undeclared identifier
+e:\project_cse_1-2\problem - copy.cpp(80) : warning C4552: '<<' : operator has no effect; expected operator with side-effect
+Error executing cl.exe.
 
-#define FR(i, a, b) for(int i = (a); i < (b); ++i)
-#define FOR(i, n) FR(i, 0, n)
-#define MP make_pair
-#define A first
-#define B second
 
-typedef long long ll;
-typedef complex<ll> pnt;
 
-const int MAXN = 400;
-
-#define X real
-#define Y imag
-
-pnt lis[MAXN];
-int n;
-int num[MAXN][MAXN];
-int ans[MAXN];
-
-ll cross(pnt a, pnt b) {
-  return imag(conj(a) * b);
-}
-
-pnt getPoint() {
-  int x, y;
-  scanf("%d%d", &x, &y);
-  return pnt(x, y);
-}
-
-int below(int i, int j) {
-  return (X(lis[i]) == X(lis[j])) && (Y(lis[i]) < Y(lis[j]));
-}
-
-int betweenBelow(int i, int j, int x) {
-  if (X(lis[i]) < X(lis[j])) {
-    return X(lis[i]) < X(lis[x])  && X(lis[x]) < X(lis[j]) &&
-      cross(lis[j] - lis[i], lis[x] - lis[i]) < 0;
-  } else {
-    return X(lis[j]) < X(lis[x])  && X(lis[x]) < X(lis[i]) &&
-      cross(lis[i] - lis[j], lis[x] - lis[j]) < 0;
-  }
-}
-
-int main() {
-  scanf("%d", &n);
-  FOR(i, n) {
-    lis[i] = getPoint();
-  }
-
-  memset(num, 0, sizeof(num));
-  FOR(i, n) {
-    FOR(j, n) if(X(lis[i]) < X(lis[j])){
-      FOR(k, n) if(k != i && k != j) {
-        if(below(k, i)) num[i][j]++;
-        if(below(k, j)) num[i][j]++;
-        if(betweenBelow(i, j, k)) {
-          num[i][j] += 2;
-        }
-      }
-      num[j][i] = -num[i][j];
-    }
-  }
-
-  memset(ans, 0, sizeof(ans));
-  FOR(i, n) FOR(j, i) FOR(k, j) {
-    int temp = abs(num[i][j] + num[j][k] + num[k][i]) / 2;
-    temp -= betweenBelow(i, j, k);
-    temp -= betweenBelow(j, k, i);
-    temp -= betweenBelow(k, i, j);
-    ans[temp]++;
-  }
-  cout<<1;
-  /*FOR(i, n - 2) {
-    printf("%d\n", ans[i]);
-  }*/
-  return 0;
-}
+<h3>Results</h3>
+problem - Copy.obj - 4 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
 

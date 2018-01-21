@@ -58,9 +58,10 @@ public class SignUpIn {
         do{
             info = (String) temp.read();
         }while(info==null);
-        SubmissionHistory submissionHistory = (SubmissionHistory) temp.read();
+        SubmissionHistory submissionHistory = null;
 
         if (!info.equals("Found")){
+            submissionHistory = (SubmissionHistory) temp.read();
             b = true;
             try {
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data.txt"));
