@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Submission">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Submission">
    <children>
-      <Label layoutX="239.0" layoutY="-50.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="350.0" AnchorPane.topAnchor="-50.0">
+      <Label layoutX="239.0" layoutY="-104.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="404.0" AnchorPane.topAnchor="-104.0">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <ButtonBar layoutY="37.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="37.0">
+      <ButtonBar layoutY="37.0" prefHeight="116.0" prefWidth="880.0" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="37.0">
          <buttons>
             <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="41.0" text="Home" textFill="#273286">
                <font>
@@ -63,7 +63,7 @@
             </Button>
          </buttons>
       </ButtonBar>
-      <TableView fx:id="table" editable="true" layoutX="4.0" layoutY="162.0" prefHeight="279.0" prefWidth="690.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      <TableView fx:id="table" editable="true" layoutX="4.0" layoutY="162.0" prefHeight="423.0" prefWidth="793.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
         <columns>
           <TableColumn fx:id="problem" prefWidth="75.0" text="Problem" />
           <TableColumn fx:id="lang" prefWidth="75.0" text="Lang" />
@@ -73,7 +73,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="signOut" layoutX="708.0" layoutY="403.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#3736c7">
+      <Button fx:id="signOut" layoutX="798.0" layoutY="555.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#3736c7">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

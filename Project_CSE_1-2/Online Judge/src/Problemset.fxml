@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problemset">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problemset">
     <children>
-        <Label layoutX="238.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="-50.0">
+        <Label layoutX="322.0" prefHeight="56.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="544.0" AnchorPane.leftAnchor="322.0" AnchorPane.topAnchor="0.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutY="36.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="36.0">
+        <ButtonBar layoutY="56.0" prefHeight="56.0" prefWidth="880.0" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="56.0">
             <buttons>
                 <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="41.0" text="Home" textFill="#273286">
                     <font>
@@ -43,11 +43,11 @@
                 </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="714.0" layoutY="400.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284" AnchorPane.leftAnchor="714.0">
+        <Button fx:id="signOut" layoutX="808.0" layoutY="547.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284" AnchorPane.leftAnchor="808.0" AnchorPane.rightAnchor="14.0">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-      <ListView fx:id="listView" layoutX="72.0" layoutY="132.0" onMouseClicked="#handleMouseClick" prefHeight="318.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="132.0" />
+      <ListView fx:id="listView" layoutX="72.0" layoutY="124.0" onMouseClicked="#handleMouseClick" prefHeight="476.0" prefWidth="781.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="124.0" />
     </children>
 </AnchorPane>

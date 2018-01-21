@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
     <children>
-        <Label layoutX="256.0" layoutY="21.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="384.0">
+        <Label layoutX="272.0" layoutY="19.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="536.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutY="64.0" prefHeight="70.0" prefWidth="780.0" AnchorPane.bottomAnchor="316.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0">
+        <ButtonBar layoutY="70.0" prefHeight="45.0" prefWidth="880.0" AnchorPane.bottomAnchor="485.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
             <buttons>
                 <Button fx:id="home" mnemonicParsing="false" onAction="#HomeItself" prefHeight="41.0" text="Home" textFill="#273284">
                     <font>
@@ -44,12 +44,12 @@
                 </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="688.0" layoutY="402.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
+        <Button fx:id="signOut" layoutX="802.0" layoutY="543.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-        <TableView layoutX="504.0" layoutY="142.0" prefHeight="235.0" prefWidth="282.0" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="14.0">
+        <TableView layoutX="552.0" layoutY="142.0" prefHeight="385.0" prefWidth="334.0" AnchorPane.leftAnchor="552.0" AnchorPane.rightAnchor="14.0">
             <columns>
                 <TableColumn prefWidth="199.0" text="                      Recent" />
             </columns>

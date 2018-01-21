@@ -10,25 +10,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpIn">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpIn">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@background.jpg" />
          </image>
       </ImageView>
-      <Label layoutY="31.0" prefHeight="40.0" prefWidth="600.0" text="                         Welcome To Our Online Judge" textFill="#101e07" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="14.0">
+      <Label layoutX="294.0" layoutY="14.0" prefHeight="40.0" prefWidth="375.0" text="Welcome To Our Online Judge" textFill="#101e07" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="loginName" layoutX="480.0" layoutY="154.0" prefHeight="29.0" prefWidth="279.0" promptText="Email/Handle" AnchorPane.topAnchor="154.0">
+      <TextField fx:id="loginName" layoutX="480.0" layoutY="154.0" prefHeight="29.0" prefWidth="279.0" promptText="Email/Handle" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="154.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="password" layoutX="479.0" layoutY="210.0" prefHeight="29.0" prefWidth="279.0" promptText="Password" AnchorPane.topAnchor="210.0" />
-      <Button fx:id="signIn" layoutX="555.0" layoutY="275.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="29.0" prefWidth="108.0" text="Sign In" textFill="#4f6fe4" AnchorPane.topAnchor="275.0">
+      <PasswordField fx:id="password" layoutX="479.0" layoutY="210.0" prefHeight="29.0" prefWidth="279.0" promptText="Password" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="210.0" />
+      <Button fx:id="signIn" layoutX="555.0" layoutY="275.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="29.0" prefWidth="108.0" text="Sign In" textFill="#4f6fe4" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="275.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -51,7 +51,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Label layoutX="537.0" layoutY="102.0" prefHeight="21.0" prefWidth="140.0" text="Have An Account??" textFill="#0a1e90">
+      <Label layoutX="651.0" layoutY="102.0" prefHeight="21.0" prefWidth="140.0" text="Have An Account??" textFill="#0a1e90" AnchorPane.rightAnchor="109.0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
