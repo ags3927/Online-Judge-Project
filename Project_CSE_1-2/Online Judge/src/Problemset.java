@@ -53,7 +53,9 @@ public class Problemset {
 
     @FXML
     void handleMouseClick(MouseEvent event) throws IOException {
-        Problem.counter = listView.getSelectionModel().getSelectedItem();
+        String prob = listView.getSelectionModel().getSelectedItem();
+        String s[]=prob.split("-");
+        Problem.counter=s[0];
         Parent root = FXMLLoader.load(getClass().getResource("Problem.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

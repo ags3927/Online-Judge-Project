@@ -99,14 +99,15 @@ public class ProcessExecutor {
     }
 
     public int CompilationCpp(SubmitData sub) throws Exception {
-
+        String prob = "Problemset//"+sub.getProblem()+"//input.txt";
+        String op = "Problemset//"+sub.getProblem()+"//output.txt";
         BufferedWriter bw = new BufferedWriter(new FileWriter("problem.cpp"));
         String data = sub.getSubmission();
         bw.write(data+"\n");
         bw.close();
         File file1  = new File("a.exe");
         if(file1.exists()){ file1.delete();}
-        ProcessExecutor p1 = new ProcessExecutor("g++ problem.cpp", "in.txt" , "out.txt");
+        ProcessExecutor p1 = new ProcessExecutor("g++ problem.cpp", prob, op);
         ProcessExecutor p2 = null;
         File file = new File("a.exe");
         boolean exists = file.exists();
@@ -116,22 +117,19 @@ public class ProcessExecutor {
         }
         File file3 = new File("out.txt");
         if(file3.exists()){file3.delete();}
-        p2 = new ProcessExecutor("a.exe", "in.txt", "out.txt");
+        p2 = new ProcessExecutor("a.exe", prob,op);
         String userSol = null;
         try {
-            userSol = readFile("out.txt");
+            userSol = readFile(op);
         } catch (IOException e) {
             e.printStackTrace();
         }
         String sysSol = null;
         try {
-            sysSol = readFile("sol.txt");
+            sysSol = readFile("Problemset//"+sub.getProblem()+"//solution.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //System.out.println(userSol);
-        //System.out.println(sysSol);
 
         int temp;
         if(p2!=null){temp=p2.exitVal;}
@@ -141,38 +139,37 @@ public class ProcessExecutor {
     }
 
     public int CompilationJava(SubmitData sub) throws IOException {
+        String prob = "Problemset//"+sub.getProblem()+"//input.txt";
+        String op = "Problemset//"+sub.getProblem()+"//output.txt";
         String data = sub.getSubmission();
         BufferedWriter bw = new BufferedWriter(new FileWriter("MyProblem.java"));
         bw.write(data+"\n");
         bw.close();
         File file1 = new File("MyProblem.jar");
         if(file1.exists()){file1.delete();}
-        ProcessExecutor p1 = new ProcessExecutor("javac MyProblem.java", "input.txt", "output.txt");
-        ProcessExecutor p2 = new ProcessExecutor("jar cfm MyProblem.jar manifest.txt MyProblem.class", "input.txt", "output.txt");
+        ProcessExecutor p1 = new ProcessExecutor("javac MyProblem.java", prob,op);
+        ProcessExecutor p2 = new ProcessExecutor("jar cfm MyProblem.jar manifest.txt MyProblem.class", prob, op);
         File file = new File("MyProblem.jar");
         if(!file.exists()) {
             System.out.println("Compilation Error.");
             return -3;
         }
         System.out.println("poop");
-        File file2 = new File("output.txt");
+        File file2 = new File(op);
         if(file2.exists()){file2.delete();}
-        ProcessExecutor p3 = new ProcessExecutor("java -jar MyProblem.jar", "input.txt", "output.txt");
+        ProcessExecutor p3 = new ProcessExecutor("java -jar MyProblem.jar", prob, op);
         String userSol = null;
         try {
-            userSol = readFile("output.txt");
+            userSol = readFile(op);
         } catch (IOException e) {
             e.printStackTrace();
         }
         String sysSol = null;
         try {
-            sysSol = readFile("solution.txt");
+            sysSol = readFile("Problemset//"+sub.getProblem()+"//solution.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //System.out.println(userSol);
-        //System.out.println(sysSol);
 
         int temp;
         if(p2!=null){temp=p2.exitVal;}

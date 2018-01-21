@@ -61,8 +61,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="215">
+              <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,57 +70,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Submission.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Submission.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
-              <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HistoryCls.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HistoryCls.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="65" lean-forward="false" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-              <folding>
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpIn.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SignUpIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-647">
-              <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Problem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Problem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="160" column="55" lean-forward="false" selection-start-line="160" selection-start-column="55" selection-end-line="160" selection-end-column="55" />
+            <state relative-caret-position="385">
+              <caret line="255" column="5" lean-forward="true" selection-start-line="255" selection-start-column="5" selection-end-line="255" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statement.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problemset/1002/statement.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statement.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problemset/1003/statement.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statement.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problemset/1004/statement.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statement.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problemset/1005/statement.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statement.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problemset/1001/statement.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="18" column="78" lean-forward="true" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,13 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Profile.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Contest.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Problemset.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Discussion.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/SignUpIn.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Home.java" />
-        <option value="$PROJECT_DIR$/src/sample/Contest.java" />
         <option value="$PROJECT_DIR$/src/sample/Discussion.java" />
         <option value="$PROJECT_DIR$/src/sample/Home.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Problem.fxml" />
@@ -185,14 +185,12 @@
         <option value="$PROJECT_DIR$/src/SignUpData.java" />
         <option value="$PROJECT_DIR$/src/Discussion.java" />
         <option value="$PROJECT_DIR$/src/Home.java" />
-        <option value="$PROJECT_DIR$/src/Problemset.java" />
         <option value="$PROJECT_DIR$/src/Contest.fxml" />
         <option value="$PROJECT_DIR$/src/Discussion.fxml" />
         <option value="$PROJECT_DIR$/src/Home.fxml" />
         <option value="$PROJECT_DIR$/src/Problem.fxml" />
         <option value="$PROJECT_DIR$/src/Problemset.fxml" />
         <option value="$PROJECT_DIR$/src/Profile.fxml" />
-        <option value="$PROJECT_DIR$/src/SignUpIn.fxml" />
         <option value="$PROJECT_DIR$/src/Profile.java" />
         <option value="$PROJECT_DIR$/src/SubmitData.java" />
         <option value="$PROJECT_DIR$/src/VerdictData.java" />
@@ -204,14 +202,23 @@
         <option value="$PROJECT_DIR$/src/mothel.java" />
         <option value="$PROJECT_DIR$/src/SubmisionHistory.java" />
         <option value="$PROJECT_DIR$/src/ReadThread.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SubmissionHistory.java" />
         <option value="$PROJECT_DIR$/src/HistoryCls.java" />
         <option value="$PROJECT_DIR$/src/Submission.java" />
-        <option value="$PROJECT_DIR$/src/Problem.java" />
         <option value="$PROJECT_DIR$/history.txt" />
         <option value="$PROJECT_DIR$/data.txt" />
         <option value="$PROJECT_DIR$/src/SignUpIn.java" />
+        <option value="$PROJECT_DIR$/ProblemName.txt" />
+        <option value="$PROJECT_DIR$/src/Problemset.java" />
+        <option value="$PROJECT_DIR$/Problemset/Problemset/1001/statement.txt" />
+        <option value="$PROJECT_DIR$/Problemset/Problemset/1002/statement.txt" />
+        <option value="$PROJECT_DIR$/Problemset/Problemset/1003/statement.txt" />
+        <option value="$PROJECT_DIR$/Problemset/Problemset/1004/statement.txt" />
+        <option value="$PROJECT_DIR$/Problemset/Problemset/1005/statement.txt" />
+        <option value="$PROJECT_DIR$/src/SignUpIn.fxml" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Problem.java" />
+        <option value="$PROJECT_DIR$/Problemset/1001/statement.txt" />
       </list>
     </option>
   </component>
@@ -222,7 +229,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -258,6 +265,11 @@
             <path>
               <item name="Online Judge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Online Judge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Online Judge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Online Judge" type="462c0819:PsiDirectoryNode" />
+              <item name="Problemset" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Online Judge" type="b2602c69:ProjectViewProjectNode" />
@@ -531,7 +543,7 @@
     <option name="totallyTimeSpent" value="31502000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,7 +564,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3974563" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39642325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -589,24 +601,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Home.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Home.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Problemset.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Contest.fxml" />
-    <entry file="file://$PROJECT_DIR$/ProblemName" />
-    <entry file="file://$PROJECT_DIR$/Problems" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Profile.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/SignUpIn.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Problem.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Problemset.java" />
-    <entry file="file://$PROJECT_DIR$/ProblemName.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Profile.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Problem.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/LogInData.java" />
@@ -662,17 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="139" lean-forward="false" selection-start-line="9" selection-start-column="139" selection-end-line="9" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignUpIn.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="225" lean-forward="false" selection-start-line="10" selection-start-column="225" selection-end-line="10" selection-end-column="225" />
           <folding />
         </state>
       </provider>
@@ -784,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SubmissionHistory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-103">
@@ -812,57 +785,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problemset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="56" column="77" lean-forward="false" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HistoryCls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="65" lean-forward="false" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-          <folding>
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Submission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="160" column="55" lean-forward="false" selection-start-line="160" selection-start-column="55" selection-end-line="160" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,11 +806,175 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ProblemName.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SignUpIn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-647">
           <caret line="70" column="36" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HistoryCls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="65" lean-forward="false" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#287#288#0" expanded="false" />
+            <element signature="e#333#334#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#405#406#0" expanded="false" />
+            <element signature="e#435#436#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
+            <element signature="e#550#551#0" expanded="false" />
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Submission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="180" column="39" lean-forward="false" selection-start-line="180" selection-start-column="39" selection-end-line="180" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problemset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1005/solution.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1001/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1002/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1003/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1004/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="58" column="6" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/Problemset/1005/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SignUpIn.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="96" lean-forward="false" selection-start-line="13" selection-start-column="96" selection-end-line="13" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/1001/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="18" column="78" lean-forward="true" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/1003/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/1004/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/1005/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problemset/1002/statement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="255" column="5" lean-forward="true" selection-start-line="255" selection-start-column="5" selection-end-line="255" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

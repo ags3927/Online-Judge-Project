@@ -206,17 +206,16 @@ public class Problem {
 
         String statement="";
         try {
-            BufferedReader bufferedReader =  new BufferedReader(new FileReader("Problems.txt"));
-            boolean b = false;
+            BufferedReader bufferedReader =  new BufferedReader(new FileReader("Problemset//"+counter+"//statement.txt"));
             while (true){
                 String data = bufferedReader.readLine();
-                if(data.equals("End of The File") && b)
-                    break;
-                if(b)
-                    statement+=data+"\n";
-                if(data.equals(counter) && !b){
-                    b=true;
+                if (data == null || data.equals("\n")){
+                    statement+="\n";
+                    continue;
                 }
+                if(data.equals("Thanks"))
+                    break;
+                statement+=data+"\n";
             }
             bufferedReader.close();
         } catch (Exception e){

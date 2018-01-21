@@ -50,7 +50,7 @@
                 <Font size="15.0" />
             </font>
         </Button>
-      <Label fx:id="problemDetails" layoutX="-1.0" layoutY="136.0" prefHeight="461.0" prefWidth="686.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="136.0" />
+      <Label fx:id="problemDetails" layoutX="-1.0" layoutY="136.0" prefHeight="600.0" prefWidth="686.0" AnchorPane.bottomAnchor="-136.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="136.0" />
       <ChoiceBox fx:id="chooseLang" layoutX="642.0" layoutY="197.0" prefWidth="150.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="157.0" />
       <Label layoutX="740.0" layoutY="131.0" prefHeight="17.0" prefWidth="150.0" text="Submit!!" textFill="#0d10ab" AnchorPane.bottomAnchor="442.0" AnchorPane.leftAnchor="740.0" AnchorPane.rightAnchor="-63.0" AnchorPane.topAnchor="131.0">
          <font>
