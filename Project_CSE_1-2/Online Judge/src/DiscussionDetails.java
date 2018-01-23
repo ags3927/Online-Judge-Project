@@ -1,13 +1,6 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,12 +8,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import sun.nio.ch.Net;
 
-public class Discussion {
+public class DiscussionDetails {
 
     @FXML
     private ResourceBundle resources;
@@ -47,27 +38,12 @@ public class Discussion {
     private Button signOut;
 
     @FXML
-    private ListView<String> blogs;
-
-    ArrayList<String>allttl = new ArrayList<>();
-    ArrayList<String>alldtl = new ArrayList<>();
+    private Label title;
 
     @FXML
-    void BlogView(MouseEvent event) throws IOException {
-        String s1 = blogs.getSelectionModel().getSelectedItem();
-        for (int i=0; i< allttl.size(); i++){
-            if (allttl.get(i).equals(s1)){
-                DiscussionDetails.ttl = allttl.get(i);
-                DiscussionDetails.dtls = alldtl.get(i);
-                break;
-            }
-        }
-        Parent root = FXMLLoader.load(getClass().getResource("DiscussionDetails.fxml"));
-        Scene scene = new Scene(root);
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
+    private Label details;
+
+    static String ttl,dtls;
 
     @FXML
     void Contest(ActionEvent event) throws IOException {
@@ -125,25 +101,18 @@ public class Discussion {
 
     @FXML
     void initialize() {
-        assert home != null : "fx:id=\"home\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert contest != null : "fx:id=\"contest\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert problemset != null : "fx:id=\"problemset\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert discussion != null : "fx:id=\"discussion\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert profile != null : "fx:id=\"profile\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert signOut != null : "fx:id=\"signOut\" was not injected: check your FXML file 'Discussion.fxml'.";
-        assert blogs != null : "fx:id=\"blogs\" was not injected: check your FXML file 'Discussion.fxml'.";
+        assert home != null : "fx:id=\"home\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert contest != null : "fx:id=\"contest\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert problemset != null : "fx:id=\"problemset\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert discussion != null : "fx:id=\"discussion\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert profile != null : "fx:id=\"profile\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert signOut != null : "fx:id=\"signOut\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert title != null : "fx:id=\"title\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
+        assert details != null : "fx:id=\"details\" was not injected: check your FXML file 'DiscussionDetails.fxml'.";
 
-        NetworkUtil nc = Communication.get();
-        nc.write("Blogs");
-        BlogObject bo = (BlogObject) nc.read();
-
-        ObservableList<String>list = FXCollections.observableArrayList();
-        for (int i=0; i<bo.title.size(); i++) {
-            list.add(bo.title.get(i));
-            allttl.add(bo.title.get(i));
-            alldtl.add(bo.dis.get(i));
-        }
-        System.out.println(allttl.size());
-        blogs.setItems(list);
+        if (ttl != null)
+            title.setText(ttl);
+        if (dtls != null)
+            details.setText(dtls);
     }
 }

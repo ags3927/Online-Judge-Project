@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sun.nio.ch.Net;
 
 public class Blog {
 
@@ -142,8 +143,15 @@ public class Blog {
 
     @FXML
     void addBlog(ActionEvent event) {
-        System.out.println(title.getText());
-        System.out.println(details.getText());
+        NetworkUtil nc = Communication.get();
+        nc.write("AddBlog");
+        String s1 = title.getText();
+        String s2 = details.getText();
+
+        nc.write(s1);
+        nc.write(s2);
+        title.setText("");
+        details.setText("");
     }
 
     @FXML

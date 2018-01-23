@@ -1,6 +1,8 @@
 import com.sun.org.apache.xerces.internal.parsers.CachingParserPool;
 
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.io.*;
+import java.rmi.server.ExportException;
 import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 
@@ -32,7 +34,6 @@ public class ReadThreadServer implements Runnable{
                     String s[] = info.split("\t\t");
                     try {
                         File file = new File(s[1]+".txt");
-                        if (file.exists()) System.out.println("yes");
                         SubmissionHistory submissionHistory = new SubmissionHistory(file);
                         nc.write(submissionHistory);
                     } catch (Exception e){
@@ -97,6 +98,34 @@ public class ReadThreadServer implements Runnable{
             }
             if (object.toString().equals("BreakUp")){
                 nc.closeConnection();
+            }
+            if (object.toString().equals("Blogs")){
+                BlogObject bo = new BlogObject();
+                try {
+                    BufferedReader br1 = new BufferedReader(new FileReader("title.txt"));
+                    BufferedReader br2 = new BufferedReader(new FileReader("dis.txt"));
+
+                    while (true){
+                        String s1 = br1.readLine();
+                        String s2 = br2.readLine();
+
+                        if (s1 == null)
+                            break;
+                        bo.title.add(s1);
+                        bo.dis.add(s2);
+                    }
+                    br1.close();
+                    br2.close();
+                    nc.write(bo);
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+            if (object.toString().equals("AddBlog")){
+                String s1 = (String) nc.read();
+                String s2 = (String) nc.read();
+
+                AddFile(s1,s2);
             }
         }
     }
@@ -224,5 +253,54 @@ public class ReadThreadServer implements Runnable{
 
         SubmissionHistory submissionHistory = new SubmissionHistory(new File(handle+".txt"));
         return submissionHistory;
+    }
+
+    private void AddFile(String s1, String s2){
+        try {
+            BufferedWriter bw1 = new BufferedWriter(new FileWriter("tmp.txt"));
+            BufferedWriter bw2 = new BufferedWriter(new FileWriter("tmp1.txt"));
+            BufferedReader br1 = new BufferedReader(new FileReader("title.txt"));
+            BufferedReader br2 = new BufferedReader(new FileReader("dis.txt"));
+
+            while (true) {
+                String x1 = br1.readLine();
+                String x2 = br2.readLine();
+
+                if (x1 == null)
+                    break;
+
+                bw1.write(x1+"\n");
+                bw2.write(x2+"\n");
+            }
+            bw1.write(s1+"\n");
+            bw2.write(s2+"\n");
+
+            br1.close();
+            br2.close();
+            bw1.close();
+            bw2.close();
+
+            BufferedWriter ebw1 = new BufferedWriter(new FileWriter("title.txt"));
+            BufferedWriter ebw2 = new BufferedWriter(new FileWriter("dis.txt"));
+            BufferedReader ebr1 = new BufferedReader(new FileReader("tmp.txt"));
+            BufferedReader ebr2 = new BufferedReader(new FileReader("tmp1.txt"));
+
+            while (true) {
+                String x1 = ebr1.readLine();
+                String x2 = ebr2.readLine();
+
+                if (x1 == null)
+                    break;
+
+                ebw1.write(x1+"\n");
+                ebw2.write(x2+"\n");
+            }
+            ebr1.close();
+            ebr2.close();
+            ebw1.close();
+            ebw2.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

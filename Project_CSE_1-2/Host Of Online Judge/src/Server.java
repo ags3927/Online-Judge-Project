@@ -15,7 +15,6 @@ public class Server {
         while (true) {
             Socket socket = serverSocket.accept();
             NetworkUtil nc = new NetworkUtil(socket);
-            System.out.println("poop");
             new ReadThreadServer(nc);
         }
     }
