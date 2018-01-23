@@ -70,8 +70,12 @@ public class Submission {
     private Button signOut;
 
     @FXML
-    void Blog(ActionEvent event) {
-
+    void Blog(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Blog.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -180,6 +184,15 @@ public class Submission {
             problem.setCellValueFactory(new PropertyValueFactory<>("Problem"));
             verdict.setCellValueFactory(new PropertyValueFactory<>("Verdict"));
             table.setItems(historyCls);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+            String s[] = br.readLine().split("\t\t");
+            br.close();
+            HandleB.setText(s[1]);
         } catch (Exception e) {
             e.printStackTrace();
         }

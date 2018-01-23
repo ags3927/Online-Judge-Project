@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,6 +8,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class Discussion {
@@ -36,6 +37,14 @@ public class Discussion {
 
     @FXML
     private Button signOut;
+
+    @FXML
+    private ListView<String> blogs;
+
+    @FXML
+    void BlogView(MouseEvent event) {
+
+    }
 
     @FXML
     void Contest(ActionEvent event) throws IOException {
@@ -99,7 +108,7 @@ public class Discussion {
         assert discussion != null : "fx:id=\"discussion\" was not injected: check your FXML file 'Discussion.fxml'.";
         assert profile != null : "fx:id=\"profile\" was not injected: check your FXML file 'Discussion.fxml'.";
         assert signOut != null : "fx:id=\"signOut\" was not injected: check your FXML file 'Discussion.fxml'.";
+        assert blogs != null : "fx:id=\"blogs\" was not injected: check your FXML file 'Discussion.fxml'.";
 
     }
 }
-
