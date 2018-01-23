@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home">
     <children>
-        <Label layoutX="272.0" layoutY="19.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="536.0">
+        <Label layoutX="306.0" layoutY="19.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="536.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>

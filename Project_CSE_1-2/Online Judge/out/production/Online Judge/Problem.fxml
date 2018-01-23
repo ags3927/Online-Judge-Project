@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Problem">
     <children>
-        <Label layoutX="289.0" layoutY="-150.0" prefHeight="375.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="351.0" AnchorPane.topAnchor="-150.0">
+        <Label layoutX="297.0" layoutY="-150.0" prefHeight="375.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="343.0" AnchorPane.topAnchor="-150.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>

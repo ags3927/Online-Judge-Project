@@ -174,6 +174,7 @@ public class Submission {
                 String s[] = data.split("\t\t");
                 historyCls.add(new HistoryCls(s[0],s[1],s[2]));
             }
+            br.close();
 
             lang.setCellValueFactory(new PropertyValueFactory<>("Lang"));
             problem.setCellValueFactory(new PropertyValueFactory<>("Problem"));

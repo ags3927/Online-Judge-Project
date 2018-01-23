@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Discussion">
     <children>
-        <Label layoutX="253.0" layoutY="-104.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="404.0" AnchorPane.topAnchor="-104.0">
+        <Label layoutX="307.0" layoutY="-104.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="404.0" AnchorPane.topAnchor="-104.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>

@@ -240,6 +240,7 @@ public class Problem {
                     verdictx = s[2];
                 }
             }
+            bufferedReader.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

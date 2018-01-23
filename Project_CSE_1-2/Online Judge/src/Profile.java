@@ -187,6 +187,27 @@ public class Profile {
         if (imagey != null)
             image.setImage(imagey);
 
+        int tr=0;
+        int ac=0;
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("history.txt"));
+            while (true){
+                String data = bufferedReader.readLine();
+                if (data == null)
+                    break;
+                String s[] = data.split("\t\t");
+                if (s[2].equals("Accepted"))
+                    ac++;
+                tr++;
+            }
+            bufferedReader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        tried.setText("Total Tried: "+tr);
+        solved.setText("Total Solved: "+ac);
+
         try {
             BufferedReader br = new BufferedReader(new FileReader("data.txt"));
             String s[] = br.readLine().split("\t\t");
