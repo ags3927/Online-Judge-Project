@@ -1,4 +1,2 @@
-C++		WaterMelon1		Compilation Error
-C++		1001		Wrong Answer
-C++		1001		Wrong Answer
-C++		1001		Wrong Answer
+Rathijit Paul		rathi		yoyo		123456789
+Kazi Noshin		Kazi Noshin		ottri1998@gmail.com		kazinoshin

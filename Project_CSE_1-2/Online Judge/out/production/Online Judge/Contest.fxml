@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contest">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contest">
     <children>
-        <Label layoutX="246.0" layoutY="-50.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="350.0" AnchorPane.topAnchor="-50.0">
+        <Label layoutX="275.0" layoutY="-117.0" prefHeight="45.0" prefWidth="260.0" text=" Our Online Judge" AnchorPane.bottomAnchor="417.0" AnchorPane.topAnchor="-117.0">
             <font>
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <ButtonBar layoutY="41.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="41.0">
+        <ButtonBar layoutY="55.0" prefHeight="57.0" prefWidth="880.0" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="55.0">
             <buttons>
                 <Button fx:id="home" mnemonicParsing="false" onAction="#Home" prefHeight="41.0" text="Home" textFill="#273286">
                     <font>
@@ -42,7 +42,7 @@
                 </Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="signOut" layoutX="691.0" layoutY="390.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
+        <Button fx:id="signOut" layoutX="802.0" layoutY="545.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" textFill="#273284">
             <font>
                 <Font size="15.0" />
             </font>
