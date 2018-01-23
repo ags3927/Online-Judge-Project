@@ -45,7 +45,7 @@ int main()
                 y=0;
             }
         }
-        cout<<ans;
+        cout<<ans<<endl;
     }
     return 0;
 }

@@ -22,7 +22,7 @@ int main()
             a=0;
             b=0;
         }
-        cout<<ans;
+        cout<<ans<<endl;
     }
     return 0;
 
