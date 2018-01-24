@@ -37,7 +37,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="profile" mnemonicParsing="false" onAction="#Profile" prefHeight="41.0" text="Profile" textFill="#273286">
+            <Button fx:id="profile" mnemonicParsing="false" onAction="#Profile" prefHeight="41.0" text="Profile" textFill="#2b368a">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -122,5 +122,20 @@
          </font>
       </Button>
       <JFXTimePicker fx:id="time1" layoutX="676.0" layoutY="338.0" prefHeight="31.0" prefWidth="171.0" promptText="End Time" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="676.0" AnchorPane.topAnchor="338.0" />
+      <Label fx:id="st1" layoutX="196.0" layoutY="304.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="st2" layoutX="196.0" layoutY="354.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="st3" layoutX="196.0" layoutY="404.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="st4" layoutX="196.0" layoutY="454.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="st5" layoutX="196.0" layoutY="504.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="it1" layoutX="396.0" layoutY="304.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="it2" layoutX="396.0" layoutY="354.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="it3" layoutX="396.0" layoutY="404.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="it4" layoutX="396.0" layoutY="454.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="it5" layoutX="396.0" layoutY="504.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="slt1" layoutX="596.0" layoutY="305.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="slt2" layoutX="598.0" layoutY="354.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="slt3" layoutX="597.0" layoutY="405.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="slt4" layoutX="597.0" layoutY="454.0" prefHeight="17.0" prefWidth="78.0" />
+      <Label fx:id="slt5" layoutX="596.0" layoutY="506.0" prefHeight="17.0" prefWidth="78.0" />
    </children>
 </AnchorPane>

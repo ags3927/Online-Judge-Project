@@ -11,7 +11,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -46,6 +48,51 @@ public class AddContest {
 
     @FXML
     private JFXTimePicker time;
+
+    @FXML
+    private Label st1;
+
+    @FXML
+    private Label st2;
+
+    @FXML
+    private Label st3;
+
+    @FXML
+    private Label st4;
+
+    @FXML
+    private Label st5;
+
+    @FXML
+    private Label it1;
+
+    @FXML
+    private Label it2;
+
+    @FXML
+    private Label it3;
+
+    @FXML
+    private Label it4;
+
+    @FXML
+    private Label it5;
+
+    @FXML
+    private Label slt1;
+
+    @FXML
+    private Label slt2;
+
+    @FXML
+    private Label slt3;
+
+    @FXML
+    private Label slt4;
+
+    @FXML
+    private Label slt5;
 
     private File statements[] = new File[5];
     private File inputs[] = new File[5];
@@ -120,6 +167,8 @@ public class AddContest {
                 sln = sln+1;
         }
 
+        new Alert(Alert.AlertType.INFORMATION,st+"\n"+sln+"\n"+in).show();
+
         Parent root = FXMLLoader.load(getClass().getResource("Contest.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -131,90 +180,105 @@ public class AddContest {
     void in1(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         inputs[0] = fileChooser.showOpenDialog(null);
+        it1.setText(inputs[0].getName());
     }
 
     @FXML
     void in2(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         inputs[1] = fileChooser.showOpenDialog(null);
+        it2.setText(inputs[1].getName());
     }
 
     @FXML
     void in3(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         inputs[2] = fileChooser.showOpenDialog(null);
+        it3.setText(inputs[2].getName());
     }
 
     @FXML
     void in4(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         inputs[3] = fileChooser.showOpenDialog(null);
+        it4.setText(inputs[3].getName());
     }
 
     @FXML
     void in5(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         inputs[4] = fileChooser.showOpenDialog(null);
+        it5.setText(inputs[4].getName());
     }
 
     @FXML
     void s1(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         statements[0] = fileChooser.showOpenDialog(null);
+        st1.setText(statements[0].getName());
     }
 
     @FXML
     void s2(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         statements[1] = fileChooser.showOpenDialog(null);
+        st2.setText(statements[1].getName());
     }
 
     @FXML
     void s3(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         statements[2] = fileChooser.showOpenDialog(null);
+        st3.setText(statements[2].getName());
     }
 
     @FXML
     void s4(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         statements[3] = fileChooser.showOpenDialog(null);
+        st4.setText(statements[3].getName());
     }
 
     @FXML
     void s5(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         statements[4] = fileChooser.showOpenDialog(null);
+        st5.setText(statements[4].getName());
     }
 
     @FXML
     void sln1(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         solutions[0] = fileChooser.showOpenDialog(null);
+        slt1.setText(solutions[0].getName());
     }
 
     @FXML
     void sln2(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         solutions[1] = fileChooser.showOpenDialog(null);
+        slt2.setText(solutions[1].getName());
     }
 
     @FXML
     void sln3(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         solutions[2] = fileChooser.showOpenDialog(null);
+        slt3.setText(solutions[2].getName());
     }
 
     @FXML
     void sln4(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         solutions[3] = fileChooser.showOpenDialog(null);
+        slt4.setText(solutions[3].getName());
     }
 
     @FXML
     void sln5(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         solutions[4] = fileChooser.showOpenDialog(null);
+        slt5.setText(solutions[4].getName());
     }
 
     @FXML
