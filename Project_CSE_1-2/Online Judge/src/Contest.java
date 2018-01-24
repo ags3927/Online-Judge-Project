@@ -37,6 +37,15 @@ public class Contest {
     private Button signOut;
 
     @FXML
+    void arrangeContest(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AddContest.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void ContestItself(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Contest.fxml"));
         Scene scene = new Scene(root);

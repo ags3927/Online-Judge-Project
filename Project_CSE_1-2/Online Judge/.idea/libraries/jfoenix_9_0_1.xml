@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="jfoenix-9.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/jfoenix-9.0.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jfoenix-8.0.1.jar!/" />
+      <root url="file://$USER_HOME$/Downloads" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/CatfishOJ/CatfishOJ/CatfishOJ/src" />
+      <root url="file://$USER_HOME$/Downloads/CatfishOJ/CatfishOJ/src" />
+      <root url="file://$USER_HOME$/Downloads/JFoenix-master/JFoenix-master/demo/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/JFoenix-master/JFoenix-master/jfoenix/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/Network-Texas-Holdem/Network Texas Hold'em/src" />
+      <root url="file://$USER_HOME$/Downloads/Rifat Sir to Mahir and Bishwajit" />
+      <root url="file://$USER_HOME$/Downloads/tcpdiff" />
+      <root url="file://$USER_HOME$/Downloads" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads" recursive="false" type="SOURCES" />
+  </library>
+</component>
