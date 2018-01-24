@@ -96,6 +96,9 @@ public class ReadThreadServer implements Runnable{
                 }
 
             }
+            if (object instanceof ContestProblem){
+                System.out.println("YES");
+            }
             if (object.toString().equals("BreakUp")){
                 nc.closeConnection();
             }
