@@ -1,0 +1,5 @@
+C++		WaterMelon1		Compilation Error
+C++		1001		Wrong Answer
+C++		1001		Wrong Answer
+C++		1001		Wrong Answer
+C++		1001		Wrong Answer

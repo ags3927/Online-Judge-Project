@@ -15,7 +15,7 @@ public class ReadThreadServer implements Runnable{
     }
 
     public void run() {
-        while (true)  {
+        while (true) {
             Object object = nc.read();
             SubmitData temp = null;
             if (object instanceof LogInData){
