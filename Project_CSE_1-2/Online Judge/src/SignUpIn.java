@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -88,7 +89,7 @@ public class SignUpIn {
             stage.show();
         }
         else
-            System.out.println("Wrong Input");
+            new Alert(Alert.AlertType.INFORMATION,"Wrong Password or Email/Hnadle").show();
 
         loginName.setText(null);
         password.setText(null);
@@ -108,10 +109,15 @@ public class SignUpIn {
         password = inPassword.getText();
         Object b = null;
 
-        if(password.length()<8){
-            System.out.println("Please Enter a Secure Password.");
+        if (email.length()<1 || name.length()<1 || handle.length()<1){
+            new Alert(Alert.AlertType.INFORMATION,"Fill Up All Data").show();
             return;
         }
+        if(password.length()<8){
+            new Alert(Alert.AlertType.INFORMATION,"Please Enter a Secure Password.").show();
+            return;
+        }
+
 
         SignUpData signUpData = new SignUpData(name,handle,email,password);
         temp.write(signUpData);
@@ -129,7 +135,8 @@ public class SignUpIn {
             }
         }
         else
-            System.out.println("Your Email or Handle is used before!! Please Provide a new Email or Handle or Log In");
+            new Alert(Alert.AlertType.INFORMATION,"Your Email or Handle is used before!! Please Provide a new Email or Handle or Log In").show();
+
 
         loginName.setText(null);
         this.password.setText(null);

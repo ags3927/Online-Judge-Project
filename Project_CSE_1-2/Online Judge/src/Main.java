@@ -23,7 +23,7 @@ public class Main extends Application {
     public static void main(String[] args){
         NetworkUtil nc = null;
         try {
-            String s = "192.168.0.115";
+            String s = "127.0.0.1";
             nc = new NetworkUtil(new Socket(s, 53333));
             new Communication(nc);
         } catch (IOException e) {

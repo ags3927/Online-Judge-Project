@@ -180,6 +180,8 @@ public class Problem {
                 e.printStackTrace();
             }
         }
+        else
+            new Alert(Alert.AlertType.INFORMATION,"Select A File & A Language!!").show();
     }
 
     public static String counter;
